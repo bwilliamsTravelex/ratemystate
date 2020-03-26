@@ -1,0 +1,42 @@
+[
+  {
+    "sourceState": "DRAFT",
+    "transitions": [
+      {
+        "target": "UNDER_REVIEW",
+        "guard": "Is transfer required details provided",
+        "action": "Print hello"
+      }
+    ]
+  },
+  {
+    "sourceState": "UNDER_REVIEW",
+    "transitions": [
+      {
+        "target": "REQUIREMENTS_READY",
+        "guard": "Is transfer required details provided",
+        "action": "Print hello"
+      }
+    ]
+  },
+  {
+    "sourceState": "REQUIREMENTS_READY",
+    "transitions": [
+      {
+        "target": "REVIEWED",
+        "guards": "Is transfer required details provided",
+        "action": "Print goodbye"
+      }
+    ]
+  },
+  {
+    "sourceState": "REVIEWED",
+    "transitions": [
+      {
+        "target": "SUBMITTED",
+        "guard": "Is transfer reviewed details provided",
+        "action": "Print hello"
+      }
+    ]
+  }
+]
